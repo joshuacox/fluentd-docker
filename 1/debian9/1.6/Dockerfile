@@ -11,7 +11,8 @@ RUN apk update \
  && rm -rf /tmp/* /var/tmp/* /usr/lib/ruby/gems/*/cache/*.gem
 
 COPY fluent.conf /etc/fluent/fluent.conf
-COPY docker-entrypoint.sh /docker-entrypoint.sh
 
 USER fluent
+COPY docker-entrypoint.sh /docker-entrypoint.sh
+RUN ls /docker-entrypoint.sh
 ENTRYPOINT /docker-entrypoint.sh $FLUENTD_ARGS

@@ -1,4 +1,4 @@
-#!/bin/bash -e
+#!/bin/sh -e
 #
 # Copyright 2017 The Kubernetes Authors.
 # Copyright 2018 Google LLC
