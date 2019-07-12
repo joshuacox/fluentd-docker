@@ -11,6 +11,7 @@ RUN apk update \
  && rm -rf /tmp/* /var/tmp/* /usr/lib/ruby/gems/*/cache/*.gem
 
 COPY fluent.conf /fluentd/etc/
+COPY fluent.conf /etc/fluent/
 
 RUN mkdir -p /var/log/fluentd \
   && chown -R fluent. /var/log/fluentd
