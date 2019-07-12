@@ -15,4 +15,4 @@ COPY fluent.conf /etc/fluent/fluent.conf
 COPY docker-entrypoint.sh /docker-entrypoint.sh
 
 USER fluent
-CMD /docker-entrypoint.sh $FLUENTD_ARGS
+ENTRYPOINT /docker-entrypoint.sh $FLUENTD_ARGS
