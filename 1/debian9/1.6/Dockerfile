@@ -14,6 +14,7 @@ COPY fluent.conf /etc/fluent/fluent.conf
 
 RUN mkdir -p /var/log/fluentd \
   && chown -R fluent. /var/log/fluentd
+VOLUME ["/var/log/fluentd"]
 
 USER fluent
 COPY docker-entrypoint.sh /docker-entrypoint.sh
