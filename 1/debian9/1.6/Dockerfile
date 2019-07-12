@@ -8,7 +8,6 @@ COPY Gemfile /Gemfile
 
 RUN apk update \
  && gem install --file /Gemfile \
- && apk del .build-deps \
  && rm -rf /tmp/* /var/tmp/* /usr/lib/ruby/gems/*/cache/*.gem
 
 COPY fluent.conf /etc/fluent/fluent.conf
