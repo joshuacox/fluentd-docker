@@ -12,6 +12,8 @@ RUN apk update \
 
 COPY fluent.conf /etc/fluent/fluent.conf
 
+RUN chown -R fluent. /var/log/fluent
+
 USER fluent
 COPY docker-entrypoint.sh /docker-entrypoint.sh
 RUN ls /docker-entrypoint.sh
