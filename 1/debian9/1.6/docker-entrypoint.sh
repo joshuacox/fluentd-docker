@@ -21,4 +21,5 @@
 # For systems without journald
 # mkdir -p /var/log/journal
 
-exec /usr/bin/fluentd $@
+DOCKER_BIN=$(which fluentd)
+exec $DOCKER_BIN $@
