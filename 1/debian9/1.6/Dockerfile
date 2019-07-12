@@ -13,9 +13,9 @@ RUN apk update \
 COPY fluent.conf /fluentd/etc/
 COPY fluent.conf /etc/fluent/
 
-RUN mkdir -p /var/log/fluentd \
-  && chown -R fluent. /var/log/fluentd
-VOLUME ["/var/log/fluentd"]
+RUN mkdir -p /var/log/fluent \
+  && chown -R fluent. /var/log/fluent
+VOLUME ["/var/log/fluent"]
 
 USER fluent
 COPY docker-entrypoint.sh /docker-entrypoint.sh
