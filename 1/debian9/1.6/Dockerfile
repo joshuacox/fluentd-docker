@@ -10,7 +10,7 @@ RUN apk update \
  && gem install --file /Gemfile \
  && rm -rf /tmp/* /var/tmp/* /usr/lib/ruby/gems/*/cache/*.gem
 
-COPY fluent.conf /etc/fluent/fluent.conf
+COPY fluent.conf /fluentd/etc/
 
 RUN mkdir -p /var/log/fluentd \
   && chown -R fluent. /var/log/fluentd
