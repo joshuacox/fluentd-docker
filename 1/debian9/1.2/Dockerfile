@@ -22,6 +22,8 @@
 
 FROM debian:9
 
+ENV UPDATEME 20190711
+
 ARG DEBIAN_FRONTEND=noninteractive
 
 COPY Gemfile /Gemfile
