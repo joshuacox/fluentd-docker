@@ -1,4 +1,5 @@
 FROM fluent/fluentd:v1.6-1
+USER root
 
 EXPOSE 80
 EXPOSE 9080
@@ -13,6 +14,5 @@ RUN apk update \
 COPY fluent.conf /etc/fluent/fluent.conf
 COPY docker-entrypoint.sh /docker-entrypoint.sh
 
-
-
+USER fluent
 CMD /docker-entrypoint.sh $FLUENTD_ARGS
