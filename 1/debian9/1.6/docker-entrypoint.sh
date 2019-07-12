@@ -19,6 +19,6 @@
 # been mounted, and therefore cannot be done in the docker build stage.
 
 # For systems without journald
-mkdir -p /var/log/journal
+# mkdir -p /var/log/journal
 
 exec /usr/bin/fluentd $@
