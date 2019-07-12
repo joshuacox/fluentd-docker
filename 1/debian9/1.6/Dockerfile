@@ -21,3 +21,4 @@
 # log files with root only access under /var/log/containers/*
 
 FROM fluentd/fluentd:v1.6-debian-1
+EXPOSE 9080
